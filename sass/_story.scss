@@ -1,0 +1,79 @@
+.story{
+
+    grid-template-columns: repeat(8,1fr);
+    
+
+    &__pictures{
+        background-color: $color-primary;
+        grid-column: full-start / col-end 4;
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: repeat(6,1fr);
+        align-items: center;
+        background-image: linear-gradient(rgba($color-primary,.3),rgba($color-primary,.1)), url(../img/thirteen.jpg);
+        background-size: cover;
+        @media screen and(max-width:$bp-medium){
+            grid-column: 1 / -1;
+           
+            
+            
+        } 
+      
+
+
+    }
+
+ 
+    &__img--1{
+        width: 110%;
+        grid-row: 4 /6;
+        grid-column: 4 / 8;
+        
+        
+        box-shadow: 0 2rem 4rem rgba(#000,.3);
+        z-index: 20;
+        @media screen and(max-width:$bp-medium){
+            width: 100%;
+            grid-row: 1 / -1;
+            
+            
+        } 
+        
+        
+
+    }
+    &__img--2{
+        width: 100%;
+        grid-row: 2 / 6;
+        grid-column: 2 /6;
+        @media screen and(max-width:$bp-medium){
+            grid-column: 2 / 6;
+            grid-row: 2 / 6;
+            
+            
+        } 
+      
+    } 
+    &__content{
+        background-color: $color-grey-light-1;
+        grid-column: col-start 5 / full-end;
+        padding: 4rem 6rem;
+      /*   display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; */
+        display: grid;
+        align-content: center;
+        justify-items: start;
+        @media screen and(max-width:$bp-medium){
+            grid-column: 1 / -1;
+             grid-row: 5 / 6; 
+            
+        } 
+    }
+    &__text{
+        font-size: 1.6rem;
+        margin-bottom: 4rem;
+    }
+    
+}
